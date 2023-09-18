@@ -12,8 +12,7 @@ export default defineConfig(() => {
         abi: wagmiMintExampleAbi,
         name: 'WagmiMintExample',
         address: {
-          [chains.mainnet.id]: '0xfba3912ca04dd458c843e2ee08967fc04f3579c2',
-          [chains.goerli.id]: '0xfba3912ca04dd458c843e2ee08967fc04f3579c2',
+          [chains.polygonMumbai.id]: '0x972690cb42589ecb4b5f7e87429852a2069f728b',
         },
       },
     ],
