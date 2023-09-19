@@ -20,7 +20,7 @@ import {
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /**
- * [__View Contract on Polygon Mumbai Polygon Scan__](https://mumbai.polygonscan.com/address/0x972690cb42589ecb4b5f7e87429852a2069f728b)
+ * [__View Contract on Sepolia Etherscan__](https://sepolia.etherscan.io/address/0x095697f308f6dc2b995563ae39abed4edc5f6ee5)
  */
 export const wagmiMintExampleABI = [
   { stateMutability: 'nonpayable', type: 'constructor', inputs: [] },
@@ -254,9 +254,33 @@ export const wagmiMintExampleABI = [
   {
     stateMutability: 'view',
     type: 'function',
+    inputs: [{ name: 'index', internalType: 'uint256', type: 'uint256' }],
+    name: 'tokenByIndex',
+    outputs: [{ name: '', internalType: 'uint256', type: 'uint256' }],
+  },
+  {
+    stateMutability: 'view',
+    type: 'function',
+    inputs: [
+      { name: 'owner', internalType: 'address', type: 'address' },
+      { name: 'index', internalType: 'uint256', type: 'uint256' },
+    ],
+    name: 'tokenOfOwnerByIndex',
+    outputs: [{ name: '', internalType: 'uint256', type: 'uint256' }],
+  },
+  {
+    stateMutability: 'view',
+    type: 'function',
     inputs: [{ name: 'tokenId', internalType: 'uint256', type: 'uint256' }],
     name: 'tokenURI',
     outputs: [{ name: '', internalType: 'string', type: 'string' }],
+  },
+  {
+    stateMutability: 'view',
+    type: 'function',
+    inputs: [],
+    name: 'totalSupply',
+    outputs: [{ name: '', internalType: 'uint256', type: 'uint256' }],
   },
   {
     stateMutability: 'nonpayable',
@@ -279,14 +303,14 @@ export const wagmiMintExampleABI = [
 ] as const
 
 /**
- * [__View Contract on Polygon Mumbai Polygon Scan__](https://mumbai.polygonscan.com/address/0x972690cb42589ecb4b5f7e87429852a2069f728b)
+ * [__View Contract on Sepolia Etherscan__](https://sepolia.etherscan.io/address/0x095697f308f6dc2b995563ae39abed4edc5f6ee5)
  */
 export const wagmiMintExampleAddress = {
-  80001: '0x972690CB42589eCb4B5F7e87429852A2069F728B',
+  11155111: '0x095697F308F6Dc2B995563aE39abeD4EdC5F6ee5',
 } as const
 
 /**
- * [__View Contract on Polygon Mumbai Polygon Scan__](https://mumbai.polygonscan.com/address/0x972690cb42589ecb4b5f7e87429852a2069f728b)
+ * [__View Contract on Sepolia Etherscan__](https://sepolia.etherscan.io/address/0x095697f308f6dc2b995563ae39abed4edc5f6ee5)
  */
 export const wagmiMintExampleConfig = {
   address: wagmiMintExampleAddress,
@@ -300,7 +324,7 @@ export const wagmiMintExampleConfig = {
 /**
  * Wraps __{@link useContractRead}__ with `abi` set to __{@link wagmiMintExampleABI}__.
  *
- * [__View Contract on Polygon Mumbai Polygon Scan__](https://mumbai.polygonscan.com/address/0x972690cb42589ecb4b5f7e87429852a2069f728b)
+ * [__View Contract on Sepolia Etherscan__](https://sepolia.etherscan.io/address/0x095697f308f6dc2b995563ae39abed4edc5f6ee5)
  */
 export function useWagmiMintExampleRead<
   TFunctionName extends string,
@@ -317,7 +341,7 @@ export function useWagmiMintExampleRead<
 ) {
   return useContractRead({
     abi: wagmiMintExampleABI,
-    address: wagmiMintExampleAddress[80001],
+    address: wagmiMintExampleAddress[11155111],
     ...config,
   } as UseContractReadConfig<
     typeof wagmiMintExampleABI,
@@ -329,7 +353,7 @@ export function useWagmiMintExampleRead<
 /**
  * Wraps __{@link useContractRead}__ with `abi` set to __{@link wagmiMintExampleABI}__ and `functionName` set to `"balanceOf"`.
  *
- * [__View Contract on Polygon Mumbai Polygon Scan__](https://mumbai.polygonscan.com/address/0x972690cb42589ecb4b5f7e87429852a2069f728b)
+ * [__View Contract on Sepolia Etherscan__](https://sepolia.etherscan.io/address/0x095697f308f6dc2b995563ae39abed4edc5f6ee5)
  */
 export function useWagmiMintExampleBalanceOf<
   TFunctionName extends 'balanceOf',
@@ -346,7 +370,7 @@ export function useWagmiMintExampleBalanceOf<
 ) {
   return useContractRead({
     abi: wagmiMintExampleABI,
-    address: wagmiMintExampleAddress[80001],
+    address: wagmiMintExampleAddress[11155111],
     functionName: 'balanceOf',
     ...config,
   } as UseContractReadConfig<
@@ -359,7 +383,7 @@ export function useWagmiMintExampleBalanceOf<
 /**
  * Wraps __{@link useContractRead}__ with `abi` set to __{@link wagmiMintExampleABI}__ and `functionName` set to `"getApproved"`.
  *
- * [__View Contract on Polygon Mumbai Polygon Scan__](https://mumbai.polygonscan.com/address/0x972690cb42589ecb4b5f7e87429852a2069f728b)
+ * [__View Contract on Sepolia Etherscan__](https://sepolia.etherscan.io/address/0x095697f308f6dc2b995563ae39abed4edc5f6ee5)
  */
 export function useWagmiMintExampleGetApproved<
   TFunctionName extends 'getApproved',
@@ -376,7 +400,7 @@ export function useWagmiMintExampleGetApproved<
 ) {
   return useContractRead({
     abi: wagmiMintExampleABI,
-    address: wagmiMintExampleAddress[80001],
+    address: wagmiMintExampleAddress[11155111],
     functionName: 'getApproved',
     ...config,
   } as UseContractReadConfig<
@@ -389,7 +413,7 @@ export function useWagmiMintExampleGetApproved<
 /**
  * Wraps __{@link useContractRead}__ with `abi` set to __{@link wagmiMintExampleABI}__ and `functionName` set to `"isApprovedForAll"`.
  *
- * [__View Contract on Polygon Mumbai Polygon Scan__](https://mumbai.polygonscan.com/address/0x972690cb42589ecb4b5f7e87429852a2069f728b)
+ * [__View Contract on Sepolia Etherscan__](https://sepolia.etherscan.io/address/0x095697f308f6dc2b995563ae39abed4edc5f6ee5)
  */
 export function useWagmiMintExampleIsApprovedForAll<
   TFunctionName extends 'isApprovedForAll',
@@ -406,7 +430,7 @@ export function useWagmiMintExampleIsApprovedForAll<
 ) {
   return useContractRead({
     abi: wagmiMintExampleABI,
-    address: wagmiMintExampleAddress[80001],
+    address: wagmiMintExampleAddress[11155111],
     functionName: 'isApprovedForAll',
     ...config,
   } as UseContractReadConfig<
@@ -419,7 +443,7 @@ export function useWagmiMintExampleIsApprovedForAll<
 /**
  * Wraps __{@link useContractRead}__ with `abi` set to __{@link wagmiMintExampleABI}__ and `functionName` set to `"name"`.
  *
- * [__View Contract on Polygon Mumbai Polygon Scan__](https://mumbai.polygonscan.com/address/0x972690cb42589ecb4b5f7e87429852a2069f728b)
+ * [__View Contract on Sepolia Etherscan__](https://sepolia.etherscan.io/address/0x095697f308f6dc2b995563ae39abed4edc5f6ee5)
  */
 export function useWagmiMintExampleName<
   TFunctionName extends 'name',
@@ -436,7 +460,7 @@ export function useWagmiMintExampleName<
 ) {
   return useContractRead({
     abi: wagmiMintExampleABI,
-    address: wagmiMintExampleAddress[80001],
+    address: wagmiMintExampleAddress[11155111],
     functionName: 'name',
     ...config,
   } as UseContractReadConfig<
@@ -449,7 +473,7 @@ export function useWagmiMintExampleName<
 /**
  * Wraps __{@link useContractRead}__ with `abi` set to __{@link wagmiMintExampleABI}__ and `functionName` set to `"owner"`.
  *
- * [__View Contract on Polygon Mumbai Polygon Scan__](https://mumbai.polygonscan.com/address/0x972690cb42589ecb4b5f7e87429852a2069f728b)
+ * [__View Contract on Sepolia Etherscan__](https://sepolia.etherscan.io/address/0x095697f308f6dc2b995563ae39abed4edc5f6ee5)
  */
 export function useWagmiMintExampleOwner<
   TFunctionName extends 'owner',
@@ -466,7 +490,7 @@ export function useWagmiMintExampleOwner<
 ) {
   return useContractRead({
     abi: wagmiMintExampleABI,
-    address: wagmiMintExampleAddress[80001],
+    address: wagmiMintExampleAddress[11155111],
     functionName: 'owner',
     ...config,
   } as UseContractReadConfig<
@@ -479,7 +503,7 @@ export function useWagmiMintExampleOwner<
 /**
  * Wraps __{@link useContractRead}__ with `abi` set to __{@link wagmiMintExampleABI}__ and `functionName` set to `"ownerOf"`.
  *
- * [__View Contract on Polygon Mumbai Polygon Scan__](https://mumbai.polygonscan.com/address/0x972690cb42589ecb4b5f7e87429852a2069f728b)
+ * [__View Contract on Sepolia Etherscan__](https://sepolia.etherscan.io/address/0x095697f308f6dc2b995563ae39abed4edc5f6ee5)
  */
 export function useWagmiMintExampleOwnerOf<
   TFunctionName extends 'ownerOf',
@@ -496,7 +520,7 @@ export function useWagmiMintExampleOwnerOf<
 ) {
   return useContractRead({
     abi: wagmiMintExampleABI,
-    address: wagmiMintExampleAddress[80001],
+    address: wagmiMintExampleAddress[11155111],
     functionName: 'ownerOf',
     ...config,
   } as UseContractReadConfig<
@@ -509,7 +533,7 @@ export function useWagmiMintExampleOwnerOf<
 /**
  * Wraps __{@link useContractRead}__ with `abi` set to __{@link wagmiMintExampleABI}__ and `functionName` set to `"supportsInterface"`.
  *
- * [__View Contract on Polygon Mumbai Polygon Scan__](https://mumbai.polygonscan.com/address/0x972690cb42589ecb4b5f7e87429852a2069f728b)
+ * [__View Contract on Sepolia Etherscan__](https://sepolia.etherscan.io/address/0x095697f308f6dc2b995563ae39abed4edc5f6ee5)
  */
 export function useWagmiMintExampleSupportsInterface<
   TFunctionName extends 'supportsInterface',
@@ -526,7 +550,7 @@ export function useWagmiMintExampleSupportsInterface<
 ) {
   return useContractRead({
     abi: wagmiMintExampleABI,
-    address: wagmiMintExampleAddress[80001],
+    address: wagmiMintExampleAddress[11155111],
     functionName: 'supportsInterface',
     ...config,
   } as UseContractReadConfig<
@@ -539,7 +563,7 @@ export function useWagmiMintExampleSupportsInterface<
 /**
  * Wraps __{@link useContractRead}__ with `abi` set to __{@link wagmiMintExampleABI}__ and `functionName` set to `"symbol"`.
  *
- * [__View Contract on Polygon Mumbai Polygon Scan__](https://mumbai.polygonscan.com/address/0x972690cb42589ecb4b5f7e87429852a2069f728b)
+ * [__View Contract on Sepolia Etherscan__](https://sepolia.etherscan.io/address/0x095697f308f6dc2b995563ae39abed4edc5f6ee5)
  */
 export function useWagmiMintExampleSymbol<
   TFunctionName extends 'symbol',
@@ -556,8 +580,68 @@ export function useWagmiMintExampleSymbol<
 ) {
   return useContractRead({
     abi: wagmiMintExampleABI,
-    address: wagmiMintExampleAddress[80001],
+    address: wagmiMintExampleAddress[11155111],
     functionName: 'symbol',
+    ...config,
+  } as UseContractReadConfig<
+    typeof wagmiMintExampleABI,
+    TFunctionName,
+    TSelectData
+  >)
+}
+
+/**
+ * Wraps __{@link useContractRead}__ with `abi` set to __{@link wagmiMintExampleABI}__ and `functionName` set to `"tokenByIndex"`.
+ *
+ * [__View Contract on Sepolia Etherscan__](https://sepolia.etherscan.io/address/0x095697f308f6dc2b995563ae39abed4edc5f6ee5)
+ */
+export function useWagmiMintExampleTokenByIndex<
+  TFunctionName extends 'tokenByIndex',
+  TSelectData = ReadContractResult<typeof wagmiMintExampleABI, TFunctionName>,
+>(
+  config: Omit<
+    UseContractReadConfig<
+      typeof wagmiMintExampleABI,
+      TFunctionName,
+      TSelectData
+    >,
+    'abi' | 'address' | 'functionName'
+  > & { chainId?: keyof typeof wagmiMintExampleAddress } = {} as any,
+) {
+  return useContractRead({
+    abi: wagmiMintExampleABI,
+    address: wagmiMintExampleAddress[11155111],
+    functionName: 'tokenByIndex',
+    ...config,
+  } as UseContractReadConfig<
+    typeof wagmiMintExampleABI,
+    TFunctionName,
+    TSelectData
+  >)
+}
+
+/**
+ * Wraps __{@link useContractRead}__ with `abi` set to __{@link wagmiMintExampleABI}__ and `functionName` set to `"tokenOfOwnerByIndex"`.
+ *
+ * [__View Contract on Sepolia Etherscan__](https://sepolia.etherscan.io/address/0x095697f308f6dc2b995563ae39abed4edc5f6ee5)
+ */
+export function useWagmiMintExampleTokenOfOwnerByIndex<
+  TFunctionName extends 'tokenOfOwnerByIndex',
+  TSelectData = ReadContractResult<typeof wagmiMintExampleABI, TFunctionName>,
+>(
+  config: Omit<
+    UseContractReadConfig<
+      typeof wagmiMintExampleABI,
+      TFunctionName,
+      TSelectData
+    >,
+    'abi' | 'address' | 'functionName'
+  > & { chainId?: keyof typeof wagmiMintExampleAddress } = {} as any,
+) {
+  return useContractRead({
+    abi: wagmiMintExampleABI,
+    address: wagmiMintExampleAddress[11155111],
+    functionName: 'tokenOfOwnerByIndex',
     ...config,
   } as UseContractReadConfig<
     typeof wagmiMintExampleABI,
@@ -569,7 +653,7 @@ export function useWagmiMintExampleSymbol<
 /**
  * Wraps __{@link useContractRead}__ with `abi` set to __{@link wagmiMintExampleABI}__ and `functionName` set to `"tokenURI"`.
  *
- * [__View Contract on Polygon Mumbai Polygon Scan__](https://mumbai.polygonscan.com/address/0x972690cb42589ecb4b5f7e87429852a2069f728b)
+ * [__View Contract on Sepolia Etherscan__](https://sepolia.etherscan.io/address/0x095697f308f6dc2b995563ae39abed4edc5f6ee5)
  */
 export function useWagmiMintExampleTokenUri<
   TFunctionName extends 'tokenURI',
@@ -586,8 +670,38 @@ export function useWagmiMintExampleTokenUri<
 ) {
   return useContractRead({
     abi: wagmiMintExampleABI,
-    address: wagmiMintExampleAddress[80001],
+    address: wagmiMintExampleAddress[11155111],
     functionName: 'tokenURI',
+    ...config,
+  } as UseContractReadConfig<
+    typeof wagmiMintExampleABI,
+    TFunctionName,
+    TSelectData
+  >)
+}
+
+/**
+ * Wraps __{@link useContractRead}__ with `abi` set to __{@link wagmiMintExampleABI}__ and `functionName` set to `"totalSupply"`.
+ *
+ * [__View Contract on Sepolia Etherscan__](https://sepolia.etherscan.io/address/0x095697f308f6dc2b995563ae39abed4edc5f6ee5)
+ */
+export function useWagmiMintExampleTotalSupply<
+  TFunctionName extends 'totalSupply',
+  TSelectData = ReadContractResult<typeof wagmiMintExampleABI, TFunctionName>,
+>(
+  config: Omit<
+    UseContractReadConfig<
+      typeof wagmiMintExampleABI,
+      TFunctionName,
+      TSelectData
+    >,
+    'abi' | 'address' | 'functionName'
+  > & { chainId?: keyof typeof wagmiMintExampleAddress } = {} as any,
+) {
+  return useContractRead({
+    abi: wagmiMintExampleABI,
+    address: wagmiMintExampleAddress[11155111],
+    functionName: 'totalSupply',
     ...config,
   } as UseContractReadConfig<
     typeof wagmiMintExampleABI,
@@ -599,7 +713,7 @@ export function useWagmiMintExampleTokenUri<
 /**
  * Wraps __{@link useContractWrite}__ with `abi` set to __{@link wagmiMintExampleABI}__.
  *
- * [__View Contract on Polygon Mumbai Polygon Scan__](https://mumbai.polygonscan.com/address/0x972690cb42589ecb4b5f7e87429852a2069f728b)
+ * [__View Contract on Sepolia Etherscan__](https://sepolia.etherscan.io/address/0x095697f308f6dc2b995563ae39abed4edc5f6ee5)
  */
 export function useWagmiMintExampleWrite<
   TFunctionName extends string,
@@ -627,7 +741,7 @@ export function useWagmiMintExampleWrite<
 ) {
   return useContractWrite<typeof wagmiMintExampleABI, TFunctionName, TMode>({
     abi: wagmiMintExampleABI,
-    address: wagmiMintExampleAddress[80001],
+    address: wagmiMintExampleAddress[11155111],
     ...config,
   } as any)
 }
@@ -635,7 +749,7 @@ export function useWagmiMintExampleWrite<
 /**
  * Wraps __{@link useContractWrite}__ with `abi` set to __{@link wagmiMintExampleABI}__ and `functionName` set to `"approve"`.
  *
- * [__View Contract on Polygon Mumbai Polygon Scan__](https://mumbai.polygonscan.com/address/0x972690cb42589ecb4b5f7e87429852a2069f728b)
+ * [__View Contract on Sepolia Etherscan__](https://sepolia.etherscan.io/address/0x095697f308f6dc2b995563ae39abed4edc5f6ee5)
  */
 export function useWagmiMintExampleApprove<
   TMode extends WriteContractMode = undefined,
@@ -659,7 +773,7 @@ export function useWagmiMintExampleApprove<
 ) {
   return useContractWrite<typeof wagmiMintExampleABI, 'approve', TMode>({
     abi: wagmiMintExampleABI,
-    address: wagmiMintExampleAddress[80001],
+    address: wagmiMintExampleAddress[11155111],
     functionName: 'approve',
     ...config,
   } as any)
@@ -668,7 +782,7 @@ export function useWagmiMintExampleApprove<
 /**
  * Wraps __{@link useContractWrite}__ with `abi` set to __{@link wagmiMintExampleABI}__ and `functionName` set to `"renounceOwnership"`.
  *
- * [__View Contract on Polygon Mumbai Polygon Scan__](https://mumbai.polygonscan.com/address/0x972690cb42589ecb4b5f7e87429852a2069f728b)
+ * [__View Contract on Sepolia Etherscan__](https://sepolia.etherscan.io/address/0x095697f308f6dc2b995563ae39abed4edc5f6ee5)
  */
 export function useWagmiMintExampleRenounceOwnership<
   TMode extends WriteContractMode = undefined,
@@ -704,7 +818,7 @@ export function useWagmiMintExampleRenounceOwnership<
     TMode
   >({
     abi: wagmiMintExampleABI,
-    address: wagmiMintExampleAddress[80001],
+    address: wagmiMintExampleAddress[11155111],
     functionName: 'renounceOwnership',
     ...config,
   } as any)
@@ -713,7 +827,7 @@ export function useWagmiMintExampleRenounceOwnership<
 /**
  * Wraps __{@link useContractWrite}__ with `abi` set to __{@link wagmiMintExampleABI}__ and `functionName` set to `"safeMint"`.
  *
- * [__View Contract on Polygon Mumbai Polygon Scan__](https://mumbai.polygonscan.com/address/0x972690cb42589ecb4b5f7e87429852a2069f728b)
+ * [__View Contract on Sepolia Etherscan__](https://sepolia.etherscan.io/address/0x095697f308f6dc2b995563ae39abed4edc5f6ee5)
  */
 export function useWagmiMintExampleSafeMint<
   TMode extends WriteContractMode = undefined,
@@ -737,7 +851,7 @@ export function useWagmiMintExampleSafeMint<
 ) {
   return useContractWrite<typeof wagmiMintExampleABI, 'safeMint', TMode>({
     abi: wagmiMintExampleABI,
-    address: wagmiMintExampleAddress[80001],
+    address: wagmiMintExampleAddress[11155111],
     functionName: 'safeMint',
     ...config,
   } as any)
@@ -746,7 +860,7 @@ export function useWagmiMintExampleSafeMint<
 /**
  * Wraps __{@link useContractWrite}__ with `abi` set to __{@link wagmiMintExampleABI}__ and `functionName` set to `"safeTransferFrom"`.
  *
- * [__View Contract on Polygon Mumbai Polygon Scan__](https://mumbai.polygonscan.com/address/0x972690cb42589ecb4b5f7e87429852a2069f728b)
+ * [__View Contract on Sepolia Etherscan__](https://sepolia.etherscan.io/address/0x095697f308f6dc2b995563ae39abed4edc5f6ee5)
  */
 export function useWagmiMintExampleSafeTransferFrom<
   TMode extends WriteContractMode = undefined,
@@ -782,7 +896,7 @@ export function useWagmiMintExampleSafeTransferFrom<
     TMode
   >({
     abi: wagmiMintExampleABI,
-    address: wagmiMintExampleAddress[80001],
+    address: wagmiMintExampleAddress[11155111],
     functionName: 'safeTransferFrom',
     ...config,
   } as any)
@@ -791,7 +905,7 @@ export function useWagmiMintExampleSafeTransferFrom<
 /**
  * Wraps __{@link useContractWrite}__ with `abi` set to __{@link wagmiMintExampleABI}__ and `functionName` set to `"setApprovalForAll"`.
  *
- * [__View Contract on Polygon Mumbai Polygon Scan__](https://mumbai.polygonscan.com/address/0x972690cb42589ecb4b5f7e87429852a2069f728b)
+ * [__View Contract on Sepolia Etherscan__](https://sepolia.etherscan.io/address/0x095697f308f6dc2b995563ae39abed4edc5f6ee5)
  */
 export function useWagmiMintExampleSetApprovalForAll<
   TMode extends WriteContractMode = undefined,
@@ -827,7 +941,7 @@ export function useWagmiMintExampleSetApprovalForAll<
     TMode
   >({
     abi: wagmiMintExampleABI,
-    address: wagmiMintExampleAddress[80001],
+    address: wagmiMintExampleAddress[11155111],
     functionName: 'setApprovalForAll',
     ...config,
   } as any)
@@ -836,7 +950,7 @@ export function useWagmiMintExampleSetApprovalForAll<
 /**
  * Wraps __{@link useContractWrite}__ with `abi` set to __{@link wagmiMintExampleABI}__ and `functionName` set to `"transferFrom"`.
  *
- * [__View Contract on Polygon Mumbai Polygon Scan__](https://mumbai.polygonscan.com/address/0x972690cb42589ecb4b5f7e87429852a2069f728b)
+ * [__View Contract on Sepolia Etherscan__](https://sepolia.etherscan.io/address/0x095697f308f6dc2b995563ae39abed4edc5f6ee5)
  */
 export function useWagmiMintExampleTransferFrom<
   TMode extends WriteContractMode = undefined,
@@ -868,7 +982,7 @@ export function useWagmiMintExampleTransferFrom<
 ) {
   return useContractWrite<typeof wagmiMintExampleABI, 'transferFrom', TMode>({
     abi: wagmiMintExampleABI,
-    address: wagmiMintExampleAddress[80001],
+    address: wagmiMintExampleAddress[11155111],
     functionName: 'transferFrom',
     ...config,
   } as any)
@@ -877,7 +991,7 @@ export function useWagmiMintExampleTransferFrom<
 /**
  * Wraps __{@link useContractWrite}__ with `abi` set to __{@link wagmiMintExampleABI}__ and `functionName` set to `"transferOwnership"`.
  *
- * [__View Contract on Polygon Mumbai Polygon Scan__](https://mumbai.polygonscan.com/address/0x972690cb42589ecb4b5f7e87429852a2069f728b)
+ * [__View Contract on Sepolia Etherscan__](https://sepolia.etherscan.io/address/0x095697f308f6dc2b995563ae39abed4edc5f6ee5)
  */
 export function useWagmiMintExampleTransferOwnership<
   TMode extends WriteContractMode = undefined,
@@ -913,7 +1027,7 @@ export function useWagmiMintExampleTransferOwnership<
     TMode
   >({
     abi: wagmiMintExampleABI,
-    address: wagmiMintExampleAddress[80001],
+    address: wagmiMintExampleAddress[11155111],
     functionName: 'transferOwnership',
     ...config,
   } as any)
@@ -922,7 +1036,7 @@ export function useWagmiMintExampleTransferOwnership<
 /**
  * Wraps __{@link usePrepareContractWrite}__ with `abi` set to __{@link wagmiMintExampleABI}__.
  *
- * [__View Contract on Polygon Mumbai Polygon Scan__](https://mumbai.polygonscan.com/address/0x972690cb42589ecb4b5f7e87429852a2069f728b)
+ * [__View Contract on Sepolia Etherscan__](https://sepolia.etherscan.io/address/0x095697f308f6dc2b995563ae39abed4edc5f6ee5)
  */
 export function usePrepareWagmiMintExampleWrite<TFunctionName extends string>(
   config: Omit<
@@ -932,7 +1046,7 @@ export function usePrepareWagmiMintExampleWrite<TFunctionName extends string>(
 ) {
   return usePrepareContractWrite({
     abi: wagmiMintExampleABI,
-    address: wagmiMintExampleAddress[80001],
+    address: wagmiMintExampleAddress[11155111],
     ...config,
   } as UsePrepareContractWriteConfig<typeof wagmiMintExampleABI, TFunctionName>)
 }
@@ -940,7 +1054,7 @@ export function usePrepareWagmiMintExampleWrite<TFunctionName extends string>(
 /**
  * Wraps __{@link usePrepareContractWrite}__ with `abi` set to __{@link wagmiMintExampleABI}__ and `functionName` set to `"approve"`.
  *
- * [__View Contract on Polygon Mumbai Polygon Scan__](https://mumbai.polygonscan.com/address/0x972690cb42589ecb4b5f7e87429852a2069f728b)
+ * [__View Contract on Sepolia Etherscan__](https://sepolia.etherscan.io/address/0x095697f308f6dc2b995563ae39abed4edc5f6ee5)
  */
 export function usePrepareWagmiMintExampleApprove(
   config: Omit<
@@ -950,7 +1064,7 @@ export function usePrepareWagmiMintExampleApprove(
 ) {
   return usePrepareContractWrite({
     abi: wagmiMintExampleABI,
-    address: wagmiMintExampleAddress[80001],
+    address: wagmiMintExampleAddress[11155111],
     functionName: 'approve',
     ...config,
   } as UsePrepareContractWriteConfig<typeof wagmiMintExampleABI, 'approve'>)
@@ -959,7 +1073,7 @@ export function usePrepareWagmiMintExampleApprove(
 /**
  * Wraps __{@link usePrepareContractWrite}__ with `abi` set to __{@link wagmiMintExampleABI}__ and `functionName` set to `"renounceOwnership"`.
  *
- * [__View Contract on Polygon Mumbai Polygon Scan__](https://mumbai.polygonscan.com/address/0x972690cb42589ecb4b5f7e87429852a2069f728b)
+ * [__View Contract on Sepolia Etherscan__](https://sepolia.etherscan.io/address/0x095697f308f6dc2b995563ae39abed4edc5f6ee5)
  */
 export function usePrepareWagmiMintExampleRenounceOwnership(
   config: Omit<
@@ -972,7 +1086,7 @@ export function usePrepareWagmiMintExampleRenounceOwnership(
 ) {
   return usePrepareContractWrite({
     abi: wagmiMintExampleABI,
-    address: wagmiMintExampleAddress[80001],
+    address: wagmiMintExampleAddress[11155111],
     functionName: 'renounceOwnership',
     ...config,
   } as UsePrepareContractWriteConfig<
@@ -984,7 +1098,7 @@ export function usePrepareWagmiMintExampleRenounceOwnership(
 /**
  * Wraps __{@link usePrepareContractWrite}__ with `abi` set to __{@link wagmiMintExampleABI}__ and `functionName` set to `"safeMint"`.
  *
- * [__View Contract on Polygon Mumbai Polygon Scan__](https://mumbai.polygonscan.com/address/0x972690cb42589ecb4b5f7e87429852a2069f728b)
+ * [__View Contract on Sepolia Etherscan__](https://sepolia.etherscan.io/address/0x095697f308f6dc2b995563ae39abed4edc5f6ee5)
  */
 export function usePrepareWagmiMintExampleSafeMint(
   config: Omit<
@@ -994,7 +1108,7 @@ export function usePrepareWagmiMintExampleSafeMint(
 ) {
   return usePrepareContractWrite({
     abi: wagmiMintExampleABI,
-    address: wagmiMintExampleAddress[80001],
+    address: wagmiMintExampleAddress[11155111],
     functionName: 'safeMint',
     ...config,
   } as UsePrepareContractWriteConfig<typeof wagmiMintExampleABI, 'safeMint'>)
@@ -1003,7 +1117,7 @@ export function usePrepareWagmiMintExampleSafeMint(
 /**
  * Wraps __{@link usePrepareContractWrite}__ with `abi` set to __{@link wagmiMintExampleABI}__ and `functionName` set to `"safeTransferFrom"`.
  *
- * [__View Contract on Polygon Mumbai Polygon Scan__](https://mumbai.polygonscan.com/address/0x972690cb42589ecb4b5f7e87429852a2069f728b)
+ * [__View Contract on Sepolia Etherscan__](https://sepolia.etherscan.io/address/0x095697f308f6dc2b995563ae39abed4edc5f6ee5)
  */
 export function usePrepareWagmiMintExampleSafeTransferFrom(
   config: Omit<
@@ -1016,7 +1130,7 @@ export function usePrepareWagmiMintExampleSafeTransferFrom(
 ) {
   return usePrepareContractWrite({
     abi: wagmiMintExampleABI,
-    address: wagmiMintExampleAddress[80001],
+    address: wagmiMintExampleAddress[11155111],
     functionName: 'safeTransferFrom',
     ...config,
   } as UsePrepareContractWriteConfig<
@@ -1028,7 +1142,7 @@ export function usePrepareWagmiMintExampleSafeTransferFrom(
 /**
  * Wraps __{@link usePrepareContractWrite}__ with `abi` set to __{@link wagmiMintExampleABI}__ and `functionName` set to `"setApprovalForAll"`.
  *
- * [__View Contract on Polygon Mumbai Polygon Scan__](https://mumbai.polygonscan.com/address/0x972690cb42589ecb4b5f7e87429852a2069f728b)
+ * [__View Contract on Sepolia Etherscan__](https://sepolia.etherscan.io/address/0x095697f308f6dc2b995563ae39abed4edc5f6ee5)
  */
 export function usePrepareWagmiMintExampleSetApprovalForAll(
   config: Omit<
@@ -1041,7 +1155,7 @@ export function usePrepareWagmiMintExampleSetApprovalForAll(
 ) {
   return usePrepareContractWrite({
     abi: wagmiMintExampleABI,
-    address: wagmiMintExampleAddress[80001],
+    address: wagmiMintExampleAddress[11155111],
     functionName: 'setApprovalForAll',
     ...config,
   } as UsePrepareContractWriteConfig<
@@ -1053,7 +1167,7 @@ export function usePrepareWagmiMintExampleSetApprovalForAll(
 /**
  * Wraps __{@link usePrepareContractWrite}__ with `abi` set to __{@link wagmiMintExampleABI}__ and `functionName` set to `"transferFrom"`.
  *
- * [__View Contract on Polygon Mumbai Polygon Scan__](https://mumbai.polygonscan.com/address/0x972690cb42589ecb4b5f7e87429852a2069f728b)
+ * [__View Contract on Sepolia Etherscan__](https://sepolia.etherscan.io/address/0x095697f308f6dc2b995563ae39abed4edc5f6ee5)
  */
 export function usePrepareWagmiMintExampleTransferFrom(
   config: Omit<
@@ -1063,7 +1177,7 @@ export function usePrepareWagmiMintExampleTransferFrom(
 ) {
   return usePrepareContractWrite({
     abi: wagmiMintExampleABI,
-    address: wagmiMintExampleAddress[80001],
+    address: wagmiMintExampleAddress[11155111],
     functionName: 'transferFrom',
     ...config,
   } as UsePrepareContractWriteConfig<
@@ -1075,7 +1189,7 @@ export function usePrepareWagmiMintExampleTransferFrom(
 /**
  * Wraps __{@link usePrepareContractWrite}__ with `abi` set to __{@link wagmiMintExampleABI}__ and `functionName` set to `"transferOwnership"`.
  *
- * [__View Contract on Polygon Mumbai Polygon Scan__](https://mumbai.polygonscan.com/address/0x972690cb42589ecb4b5f7e87429852a2069f728b)
+ * [__View Contract on Sepolia Etherscan__](https://sepolia.etherscan.io/address/0x095697f308f6dc2b995563ae39abed4edc5f6ee5)
  */
 export function usePrepareWagmiMintExampleTransferOwnership(
   config: Omit<
@@ -1088,7 +1202,7 @@ export function usePrepareWagmiMintExampleTransferOwnership(
 ) {
   return usePrepareContractWrite({
     abi: wagmiMintExampleABI,
-    address: wagmiMintExampleAddress[80001],
+    address: wagmiMintExampleAddress[11155111],
     functionName: 'transferOwnership',
     ...config,
   } as UsePrepareContractWriteConfig<
@@ -1100,7 +1214,7 @@ export function usePrepareWagmiMintExampleTransferOwnership(
 /**
  * Wraps __{@link useContractEvent}__ with `abi` set to __{@link wagmiMintExampleABI}__.
  *
- * [__View Contract on Polygon Mumbai Polygon Scan__](https://mumbai.polygonscan.com/address/0x972690cb42589ecb4b5f7e87429852a2069f728b)
+ * [__View Contract on Sepolia Etherscan__](https://sepolia.etherscan.io/address/0x095697f308f6dc2b995563ae39abed4edc5f6ee5)
  */
 export function useWagmiMintExampleEvent<TEventName extends string>(
   config: Omit<
@@ -1110,7 +1224,7 @@ export function useWagmiMintExampleEvent<TEventName extends string>(
 ) {
   return useContractEvent({
     abi: wagmiMintExampleABI,
-    address: wagmiMintExampleAddress[80001],
+    address: wagmiMintExampleAddress[11155111],
     ...config,
   } as UseContractEventConfig<typeof wagmiMintExampleABI, TEventName>)
 }
@@ -1118,7 +1232,7 @@ export function useWagmiMintExampleEvent<TEventName extends string>(
 /**
  * Wraps __{@link useContractEvent}__ with `abi` set to __{@link wagmiMintExampleABI}__ and `eventName` set to `"Approval"`.
  *
- * [__View Contract on Polygon Mumbai Polygon Scan__](https://mumbai.polygonscan.com/address/0x972690cb42589ecb4b5f7e87429852a2069f728b)
+ * [__View Contract on Sepolia Etherscan__](https://sepolia.etherscan.io/address/0x095697f308f6dc2b995563ae39abed4edc5f6ee5)
  */
 export function useWagmiMintExampleApprovalEvent(
   config: Omit<
@@ -1128,7 +1242,7 @@ export function useWagmiMintExampleApprovalEvent(
 ) {
   return useContractEvent({
     abi: wagmiMintExampleABI,
-    address: wagmiMintExampleAddress[80001],
+    address: wagmiMintExampleAddress[11155111],
     eventName: 'Approval',
     ...config,
   } as UseContractEventConfig<typeof wagmiMintExampleABI, 'Approval'>)
@@ -1137,7 +1251,7 @@ export function useWagmiMintExampleApprovalEvent(
 /**
  * Wraps __{@link useContractEvent}__ with `abi` set to __{@link wagmiMintExampleABI}__ and `eventName` set to `"ApprovalForAll"`.
  *
- * [__View Contract on Polygon Mumbai Polygon Scan__](https://mumbai.polygonscan.com/address/0x972690cb42589ecb4b5f7e87429852a2069f728b)
+ * [__View Contract on Sepolia Etherscan__](https://sepolia.etherscan.io/address/0x095697f308f6dc2b995563ae39abed4edc5f6ee5)
  */
 export function useWagmiMintExampleApprovalForAllEvent(
   config: Omit<
@@ -1147,7 +1261,7 @@ export function useWagmiMintExampleApprovalForAllEvent(
 ) {
   return useContractEvent({
     abi: wagmiMintExampleABI,
-    address: wagmiMintExampleAddress[80001],
+    address: wagmiMintExampleAddress[11155111],
     eventName: 'ApprovalForAll',
     ...config,
   } as UseContractEventConfig<typeof wagmiMintExampleABI, 'ApprovalForAll'>)
@@ -1156,7 +1270,7 @@ export function useWagmiMintExampleApprovalForAllEvent(
 /**
  * Wraps __{@link useContractEvent}__ with `abi` set to __{@link wagmiMintExampleABI}__ and `eventName` set to `"BatchMetadataUpdate"`.
  *
- * [__View Contract on Polygon Mumbai Polygon Scan__](https://mumbai.polygonscan.com/address/0x972690cb42589ecb4b5f7e87429852a2069f728b)
+ * [__View Contract on Sepolia Etherscan__](https://sepolia.etherscan.io/address/0x095697f308f6dc2b995563ae39abed4edc5f6ee5)
  */
 export function useWagmiMintExampleBatchMetadataUpdateEvent(
   config: Omit<
@@ -1166,7 +1280,7 @@ export function useWagmiMintExampleBatchMetadataUpdateEvent(
 ) {
   return useContractEvent({
     abi: wagmiMintExampleABI,
-    address: wagmiMintExampleAddress[80001],
+    address: wagmiMintExampleAddress[11155111],
     eventName: 'BatchMetadataUpdate',
     ...config,
   } as UseContractEventConfig<
@@ -1178,7 +1292,7 @@ export function useWagmiMintExampleBatchMetadataUpdateEvent(
 /**
  * Wraps __{@link useContractEvent}__ with `abi` set to __{@link wagmiMintExampleABI}__ and `eventName` set to `"MetadataUpdate"`.
  *
- * [__View Contract on Polygon Mumbai Polygon Scan__](https://mumbai.polygonscan.com/address/0x972690cb42589ecb4b5f7e87429852a2069f728b)
+ * [__View Contract on Sepolia Etherscan__](https://sepolia.etherscan.io/address/0x095697f308f6dc2b995563ae39abed4edc5f6ee5)
  */
 export function useWagmiMintExampleMetadataUpdateEvent(
   config: Omit<
@@ -1188,7 +1302,7 @@ export function useWagmiMintExampleMetadataUpdateEvent(
 ) {
   return useContractEvent({
     abi: wagmiMintExampleABI,
-    address: wagmiMintExampleAddress[80001],
+    address: wagmiMintExampleAddress[11155111],
     eventName: 'MetadataUpdate',
     ...config,
   } as UseContractEventConfig<typeof wagmiMintExampleABI, 'MetadataUpdate'>)
@@ -1197,7 +1311,7 @@ export function useWagmiMintExampleMetadataUpdateEvent(
 /**
  * Wraps __{@link useContractEvent}__ with `abi` set to __{@link wagmiMintExampleABI}__ and `eventName` set to `"OwnershipTransferred"`.
  *
- * [__View Contract on Polygon Mumbai Polygon Scan__](https://mumbai.polygonscan.com/address/0x972690cb42589ecb4b5f7e87429852a2069f728b)
+ * [__View Contract on Sepolia Etherscan__](https://sepolia.etherscan.io/address/0x095697f308f6dc2b995563ae39abed4edc5f6ee5)
  */
 export function useWagmiMintExampleOwnershipTransferredEvent(
   config: Omit<
@@ -1207,7 +1321,7 @@ export function useWagmiMintExampleOwnershipTransferredEvent(
 ) {
   return useContractEvent({
     abi: wagmiMintExampleABI,
-    address: wagmiMintExampleAddress[80001],
+    address: wagmiMintExampleAddress[11155111],
     eventName: 'OwnershipTransferred',
     ...config,
   } as UseContractEventConfig<
@@ -1219,7 +1333,7 @@ export function useWagmiMintExampleOwnershipTransferredEvent(
 /**
  * Wraps __{@link useContractEvent}__ with `abi` set to __{@link wagmiMintExampleABI}__ and `eventName` set to `"Transfer"`.
  *
- * [__View Contract on Polygon Mumbai Polygon Scan__](https://mumbai.polygonscan.com/address/0x972690cb42589ecb4b5f7e87429852a2069f728b)
+ * [__View Contract on Sepolia Etherscan__](https://sepolia.etherscan.io/address/0x095697f308f6dc2b995563ae39abed4edc5f6ee5)
  */
 export function useWagmiMintExampleTransferEvent(
   config: Omit<
@@ -1229,7 +1343,7 @@ export function useWagmiMintExampleTransferEvent(
 ) {
   return useContractEvent({
     abi: wagmiMintExampleABI,
-    address: wagmiMintExampleAddress[80001],
+    address: wagmiMintExampleAddress[11155111],
     eventName: 'Transfer',
     ...config,
   } as UseContractEventConfig<typeof wagmiMintExampleABI, 'Transfer'>)
