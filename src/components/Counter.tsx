@@ -31,25 +31,28 @@ const Counter = () => {
     }, [isLoading, isSuccess])
 
 
+    const likestring = (likes && BigInt(likes as any)?.toString() ) || '0'
+
     return (
         <div>
             <div>
 
                 <div   style={{  fontSize: '3em' }}>
-                    {likes && BigInt(likes as any)?.toString() || '0' }
+                    {likestring}
                 </div>
 
                 <button
                     className="btn btn-primary m-3 btn-lg"
                     style={{ margin: '10px 0', padding: '10px 20px', fontSize: '1.5em' }}
+                    disabled={isLoading}
                     onClick={()=>{write?.()}}
                 >
-                    LIKE
+                    {isLoading ? 'Confirming...' : 'Like'}
                 </button>
-                <Typography variant="body1" component="div">
+              {/*  <Typography variant="body1" component="div">
 
                     Last Updated: <span id="lastUpdated">{lastUpdated ? new Date(Number(lastUpdated as any) * 1000).toISOString() : 'N/A'}</span>
-                </Typography>
+                </Typography>*/}
             </div>
         </div>
     );
