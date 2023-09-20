@@ -1,0 +1,8 @@
+/* styles/Home.module.css */
+.title {
+    font-size: 2em;
+}
+
+.counter-value {
+    font-size: 4em;
+}

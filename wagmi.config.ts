@@ -12,7 +12,7 @@ export default defineConfig(() => {
         abi: wagmiMintExampleAbi,
         name: 'WagmiMintExample',
         address: {
-          [chains.sepolia.id]: '0x095697f308f6dc2b995563ae39abed4edc5f6ee5',
+          [chains.sepolia.id]: '0x5AEACa3F8c559C270E38131A986e815F8c667fdB',
         },
       },
     ],
