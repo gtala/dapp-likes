@@ -36,7 +36,7 @@ const Counter = () => {
             <div>
 
                 <div   style={{  fontSize: '3em' }}>
-                    {BigInt(likes as any)?.toString() }
+                    {likes && BigInt(likes as any)?.toString() || '0' }
                 </div>
 
                 <button
