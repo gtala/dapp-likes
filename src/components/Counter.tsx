@@ -1,11 +1,10 @@
 'use client'
-import {useEffect, useState} from 'react';
+import {useEffect} from 'react';
 import {
     usePrepareWagmiMintExampleStore, useWagmiMintExampleRetrieveDate, useWagmiMintExampleRetrieveLikes,
     useWagmiMintExampleStore
 } from "../generated";
 import { useWaitForTransaction} from "wagmi";
-import { Typography} from "@mui/material";
 
 
 const Counter = () => {
@@ -29,6 +28,8 @@ const Counter = () => {
         refechLikes()
         refetchUpdated()
     }, [isLoading, isSuccess])
+
+    console.log("likes", likes)
 
 
     const likestring = (likes && BigInt(likes as any)?.toString() ) || '0'
